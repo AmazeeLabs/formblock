@@ -145,6 +145,6 @@ class NodeFormBlock extends BlockBase implements ContainerFactoryPluginInterface
    */
   public function blockAccess(AccountInterface $account) {
     $access_control_handler = $this->entityManager->getAccessControlHandler('node');
-    return $access_control_handler->createAccess($this->configuration['type'], $account);
+    return $access_control_handler->createAccess($this->configuration['type'], $account, array(), TRUE);
   }
 }
